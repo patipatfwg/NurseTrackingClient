@@ -21,12 +21,11 @@ import com.phyathai.NurseTrackingClient.models.BleDevice
 import com.phyathai.NurseTrackingClient.services.BleScanService
 import com.phyathai.NurseTrackingClient.utils.Constants
 import com.phyathai.NurseTrackingClient.utils.MQTTUtils
-import com.phyathai.NurseTrackingClient.utils.SosoUtils
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
-    private var sosoUtil: SosoUtils? = null
     private var mqttUtil: MQTTUtils? = null
     private var bleDeviceAdapter: BleDevicesAdapter? = null
 
@@ -65,11 +64,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mqttUtil = MQTTUtils.getInstance(this@MainActivity)
-        sosoUtil = SosoUtils.getInstance(this@MainActivity)
         //
         val sharedPref: SharedPreferences = getSharedPreferences("phyathai", 0)
         val editor = sharedPref.edit()

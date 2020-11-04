@@ -29,7 +29,7 @@ class MQTTUtils private constructor(private val context: Context) {
         const val mqttServerFWG: String = "tcp://10.32.11.94:1883"
         const val mqttServerUri = mqttServerSoso
         const val publishTopic: String = "Phyathai/Ward1"
-        const val subTopic: String = "Phyathai/Ward1/Sv"
+        const val subTopic: String = "Phyathai/Ward1/Server"
         const val clientId: String = ""
     }
 

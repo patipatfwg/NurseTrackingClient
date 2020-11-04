@@ -92,6 +92,11 @@ class BleScanService : Service() {
                             }
                         }
                     }
+                }else{
+                    payload.putExtra(
+                        Constants.IntentExtras.BLE_DEVICE,
+                        BleDevice(BLEname, BLEaddress, BLErssi)
+                    )
                 }
             }
         }
